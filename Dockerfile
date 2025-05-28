@@ -14,7 +14,7 @@ RUN chmod 777 /app
 
 # Install python dependencies
 COPY requirements.txt .
-RUN pip3 install --no-cache-dir -U -r requirements.txt
+RUN pip3 install --break-system-packages --no-cache-dir -U -r requirements.txt
 
 # Copy files to the working directory
 COPY . .
